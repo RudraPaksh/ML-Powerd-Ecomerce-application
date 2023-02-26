@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    //the purpose of this file is to declare attributes so that can be used in custom styles-->
+
+        <!-- Other values-->
+        <attr name="colorPrimary" format="reference|color"/>
+        <attr name="colorSubPrimary" format="reference|color"/>
+        <attr name="colorForObjects" format="reference|color"   />
+        <attr name="colorForObjectsSecondary" format="reference|color"   />
+        <attr name="colorPrimaryText" format="reference|color"   />
+        <attr name="colorSecondaryText" format="reference|color"   />
+
+
+</resources>

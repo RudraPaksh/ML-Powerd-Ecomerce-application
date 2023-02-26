@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_root_frgm_seller_cnfrm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    android:clickable="true"
+    tools:context="io.shubh.e_comm_ver1.SellerDashboard.SellerConfirmationFragment">
+
+    <View
+        android:id="@+id/iv_center"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+
+        android:layout_alignParentTop="true"
+
+
+        android:layout_alignParentRight="true"
+
+
+        android:layout_gravity="left"
+        android:layout_marginTop="-40dp"
+        android:layout_marginRight="-40dp"
+        android:layout_weight="1"
+
+        android:alpha=".5   "
+        android:background="@drawable/bg_gradient2_fr_seller_confirm_frag"
+        android:rotation="160" />
+
+    <View
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+
+        android:layout_alignParentTop="true"
+
+
+        android:layout_alignParentRight="true"
+
+
+        android:layout_gravity="left"
+        android:layout_marginTop="-20dp"
+        android:layout_marginRight="-40dp"
+        android:layout_weight="1"
+        android:alpha=".5   "
+        android:background="@drawable/bg_gradient2_fr_seller_confirm_frag"
+        android:rotation="10" />
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background=" @color/colorTransparent"
+        android:elevation="0dp"
+
+        android:gravity="center_vertical"
+        android:minHeight="?attr/actionBarSize"
+        android:padding="4dp"
+        android:visibility="visible">
+
+        <ImageButton
+            android:id="@+id/btCloseFrag"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_gravity="left"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_back_svg"
+            android:tint="@color/colorLightGrayForSubHeaderTvs"
+
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ImageView
+        android:id="@+id/iv_bottom_right"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+
+        android:layout_alignParentLeft="true"
+
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="left"
+        android:layout_marginLeft="-40dp"
+        android:layout_marginBottom="-40dp"
+        android:layout_weight="1"
+
+        android:alpha=".6"
+        android:padding="10dp"
+        android:rotation="5"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_img_delivery_svg" />
+
+    <TextView
+        android:id="@+id/Header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:layout_below="@id/toolbar"
+        android:fontFamily="@font/adamina"
+        android:paddingLeft="15dp"
+        android:paddingTop="25dp"
+        android:paddingRight="15dp"
+        android:text="Become A Seller  on ML Pec"
+        android:textAlignment="textStart"
+        android:textColor="?attr/colorPrimaryText"
+
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/subHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/Header"
+        android:layout_marginTop="0dp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="15dp"
+        android:text="Have The Following Available"
+        android:textAlignment="viewStart"
+        android:textColor="?attr/colorPrimaryText"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/subHeader"
+        android:layout_marginTop="25dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_layout_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_shop_svg"
+                    android:tint="?attr/colorPrimaryText"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/arimo"
+                    android:text="Business Name and Address"
+                    android:textColor="?attr/colorPrimaryText"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_layout_border"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/arimo"
+                    android:gravity="right"
+                    android:text="Mobile or Telephone No"
+                    android:textColor="?attr/colorPrimaryText"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_phone_svg"
+                    android:padding="10dp"
+                    android:tint="?attr/colorPrimaryText"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_layout_border"
+                >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_bank_svg"
+                    android:padding="10dp"
+                    android:tint="?attr/colorPrimaryText"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/arimo"
+                    android:text="Valid Bank Account"
+                    android:textColor="?attr/colorPrimaryText"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_layout_border"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/arimo"
+                    android:gravity="right"
+                    android:text="Tax Information"
+                    android:textColor="?attr/colorPrimaryText"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_tax_svg"
+                    android:padding="10dp"
+                    android:tint="?attr/colorPrimaryText"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--===================bottom button work-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="2">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_gradient_gradient"
+            android:text="Submit docs"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:textColor="?attr/colorPrimary" />
+
+        <Button
+            android:id="@+id/bt_later"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_border"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Later"
+            android:textColor="@color/colorSecondary" />
+    </LinearLayout>
+
+</RelativeLayout>

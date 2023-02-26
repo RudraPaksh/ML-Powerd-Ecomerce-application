@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root_ctgr_items_frag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="?attr/colorPrimary"
+    tools:context="io.shubh.e_comm_ver1.io.shubh.e_comm_ver1.CategoryItems.View.CategoryItemsFragment">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:stateListAnimator="@null">
+
+            <!--custom tool bar below-->
+            <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:elevation="0dp"
+
+                android:gravity="center_vertical"
+                android:minHeight="?attr/actionBarSize"
+                android:padding="4dp"
+                android:visibility="visible"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <!--TODo -make the below bt color more light-->
+                <ImageButton
+                    android:id="@+id/btCloseFrag"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_gravity="left"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_back_svg"
+                    android:tint="?attr/colorPrimaryText"
+
+                    />
+
+
+                <ImageButton
+                    android:id="@+id/btBagItems"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    android:tint="?attr/colorPrimaryText"
+                    app:srcCompat="@drawable/ic_shopping_bag_svg" />
+
+                <ImageButton
+                    android:id="@+id/btNotification"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    android:tint="?attr/colorPrimaryText"
+                    app:srcCompat="@drawable/ic_notification_svg" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:animateLayoutChanges="true">
+
+                <TextView
+                    android:id="@+id/id_fr_tv_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/adamina"
+                    android:maxLines="1"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="20dp"
+                    android:paddingRight="15dp"
+                    android:text="Category"
+                    android:textColor="?attr/colorPrimaryText"
+                    android:textSize="35sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/id_fr_ll_fr_directory_tvs"
+                    android:layout_width="match_parent"
+                    android:layout_height="23dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:animateLayoutChanges="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/id_fr_tv_catgr_directory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:paddingLeft="15dp"
+                        android:text="Category"
+                        android:textAllCaps="false"
+                        android:textColor="?attr/colorSecondaryText"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/id_fr_tv_first_slash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:paddingLeft="5dp"
+                        android:text="/"
+                        android:textColor="?attr/colorSecondaryText"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/id_fr_tv_sub_catgr_directory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:paddingLeft="5dp"
+                        android:text="Sub-Category"
+                        android:textColor="?attr/colorSecondaryText"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/id_fr_tv_scnd_slash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:paddingLeft="5dp"
+                        android:text="/"
+                        android:textColor="?attr/colorSecondaryText"
+                        android:textSize="15sp"
+
+
+                        />
+
+                    <TextView
+                        android:id="@+id/id_fr_tv_sub_sub_catgr_directory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:paddingLeft="5dp"
+                        android:text="Sub-Sub-Category"
+                        android:textColor="?attr/colorSecondaryText"
+                        android:textSize="15sp"
+
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <include
+            layout="@layout/shimmer_layout_file_fr_include_in_ctgr_items_frag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <com.sak.ultilviewlib.UltimateRefreshView
+            android:id="@+id/refreshView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorPrimary"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/id_fr_recycler_view_ctgr_items_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="50dp"
+
+            android:paddingRight="4dp"
+            android:paddingBottom="00dp"
+
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </com.sak.ultilviewlib.UltimateRefreshView>
+
+        <RelativeLayout
+            android:id="@+id/rlCpntainerFrEmptyListMsg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" >/
+            <ImageView
+                android:id="@+id/ivEmptyMsg"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:layout_above="@id/itsPurposeIsToPostionOtherLayoutRelativeToCenter"
+               android:src="@drawable/ic_empty_reclr_view_ctgr_svg"
+                android:padding="10dp"
+                />
+            <View
+                android:id="@+id/itsPurposeIsToPostionOtherLayoutRelativeToCenter"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_centerInParent="true"
+                />
+
+            <TextView
+                android:id="@+id/tv1OfEmptyMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/ivEmptyMsg"
+                android:text="No Items Found"
+                android:textSize="20dp"
+                android:padding="2dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="?attr/colorPrimaryText"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/tv1OfEmptyMsg"
+                android:text="Become A seller in the app,And sell Items"
+                android:textSize="15dp"
+                android:padding="0dp"
+                android:fontFamily="sans-serif"
+                android:textColor="?attr/colorSecondaryText"
+                />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_root_container_of_side_strip"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+
+            android:elevation="0dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+            >
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/container_fr_ctgr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    android:paddingBottom="100dp"
+                    >
+
+                    <include
+                        layout="@layout/infalte_vertical_textviews_for_ctgr_vertical_strip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</RelativeLayout>

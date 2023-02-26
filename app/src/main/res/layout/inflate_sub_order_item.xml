@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/bg_layout_border"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/tvOrdreNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item no 121 from order no 10006"
+        android:textColor="?attr/colorPrimaryText"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvOrdreAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Qt. 3"
+        android:textColor="?attr/colorPrimaryText"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvTimeOfCreation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvOrdreNo"
+        android:layout_marginTop="3dp"
+        android:text="12:360Am"
+        android:textColor="?attr/colorSecondaryText"
+        android:textSize="17sp" />
+
+    <!--  <TextView
+          android:id="@+id/tvItemName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Item no 121 from order no 10006"
+          android:textColor="@color/colorSecondary"
+          android:textSize="18sp"
+          android:textStyle="normal"
+          android:layout_below="@id/tvTimeOfCreation"/>-->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Packaging pending"
+        android:layout_below="@id/tvTimeOfCreation"
+        android:textColor="@color/colorRed"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="2dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_container_of_ordered_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvStatus"
+        android:layout_marginTop="5dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:elevation="15dp"
+            card_view:cardCornerRadius="2dp">
+
+
+            <ImageView
+                android:id="@+id/ivItemImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorLoadingImageViewPlaceholder"
+                android:scaleType="fitCenter" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/cv"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Versache jeans"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_marginTop="2dp"
+                android:id="@+id/tvVarietyCtgrName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvItemName"
+                android:text="Company"
+                android:textColor="@color/colorSecondary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:id="@+id/tvVarietyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tvVarietyCtgrName"
+                android:layout_toRightOf="@id/tvVarietyCtgrName"
+                android:text="Puma"
+                android:textColor="@color/colorSecondary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:id="@+id/tvAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvVarietyCtgrName"
+                android:text="Ordered by Ravish "
+android:textColor="?attr/colorSecondaryText"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
+
+
+
+

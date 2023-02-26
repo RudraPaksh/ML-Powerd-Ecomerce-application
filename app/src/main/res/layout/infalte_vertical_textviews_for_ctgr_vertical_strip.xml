@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_container_of_vertical_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    >
+
+    <io.shubh.e_comm_ver1.Utils.VerticalTextView
+        android:id="@+id/vertical_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Sub Category"
+        android:textColor="?attr/colorSecondaryText"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="monospace"/>
+
+
+
+</RelativeLayout>
+
+

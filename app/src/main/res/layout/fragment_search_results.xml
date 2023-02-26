@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root_ctgr_items_frag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    tools:context="io.shubh.e_comm_ver1.SearchPage.View.SearchResultsFragment">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary"
+
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:stateListAnimator="@null">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_search"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="8dp"
+                android:elevation="50dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="50dp"  >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:adjustViewBounds="true"
+                        android:clickable="false"
+                        android:layout_marginLeft="5dp"
+                        app:srcCompat="@drawable/ic_search_svg"
+                        android:tint="?attr/colorSecondaryText"/>
+
+                    <TextView
+                        android:id="@+id/edt_search_text"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="?attr/colorSecondaryText"
+
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:gravity="center_vertical"
+                        android:text="Search using ML Tech."
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvDescp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTimeOfCreation1"
+                android:layout_alignStart="@id/tvStatus1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="#398CD834"
+                android:padding="8dp"
+                android:text="Results for :"
+                android:textColor="#8CD834"
+                android:textSize="18sp" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <include
+            layout="@layout/shimmer_layout_file_fr_include_in_ctgr_items_frag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/id_fr_recycler_view_ctgr_items_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="5dp"
+            android:top="10dp"
+
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</RelativeLayout>

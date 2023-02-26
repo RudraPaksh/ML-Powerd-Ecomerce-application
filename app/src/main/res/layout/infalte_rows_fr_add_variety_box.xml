@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_container_of_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    >
+
+    <EditText
+        android:id="@+id/ed_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Variety no. 1"
+      android:layout_toLeftOf="@id/cv1"
+        android:background="@drawable/bg_layout_border"
+        android:padding="10dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="8dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="6dp"
+
+        >
+    <ImageButton
+        android:id="@+id/bt_del"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_close_svg"
+        android:background="@color/colorSecondary"
+        android:padding="6.5dp"
+        android:scaleType="centerCrop"
+        android:tint="@color/colorPrimary"
+        />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
+

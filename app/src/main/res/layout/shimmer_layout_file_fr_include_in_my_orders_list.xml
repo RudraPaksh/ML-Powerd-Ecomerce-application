@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/tools"
+
+    android:id="@+id/shimmer_view_container"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    shimmer:duration="400">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_layout_border"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <View
+                android:layout_width="250dp"
+                android:layout_height="20dp"
+                android:background="@color/colorShimmerLoading"
+
+                />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:background="@color/colorShimmerLoading"
+android:layout_gravity="right"
+                android:layout_marginLeft="40dp"
+                />
+            </LinearLayout>
+            <View
+                android:id="@+id/tv"
+                android:layout_width="50dp"
+                android:layout_height="15dp"
+                android:layout_below="@id/tvOrdreNo"
+                android:layout_marginTop="3dp"
+                android:background="@color/colorShimmerLoading"
+
+                />
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/tvTimeOfCreation"
+                >
+
+
+
+
+                    <ImageView
+                        android:id="@+id/iv"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@color/colorShimmerLoading"
+                         />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@id/iv"
+                    android:padding="3dp"
+
+                    >
+
+
+                    <View
+                        android:id="@+id/tv1"
+                        android:layout_width="150dp"
+                        android:layout_height="18dp"
+                        android:background="@color/colorShimmerLoading" />
+
+                    <View
+                        android:id="@+id/tv2"
+                        android:layout_width="40dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/colorShimmerLoading" />
+
+
+
+                    <View
+                        android:id="@+id/tv3"
+                        android:layout_width="120dp"
+                        android:layout_height="15dp"
+                        android:layout_below="@id/tv1"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorShimmerLoading" />
+
+
+                    <View
+
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_below="@id/tv3"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorShimmerLoading" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_layout_border"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:background="@color/colorShimmerLoading"
+                    />
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:background="@color/colorShimmerLoading"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="40dp"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="50dp"
+                android:layout_height="15dp"
+
+                android:layout_marginTop="3dp"
+                android:background="@color/colorShimmerLoading"
+
+                />
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/tvTimeOfCreation"
+                >
+
+
+
+
+                <ImageView
+                    android:id="@+id/iv22"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@color/colorShimmerLoading"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@id/iv22"
+                    android:padding="3dp"
+
+                    >
+
+
+                    <View
+                        android:id="@+id/tv122"
+                        android:layout_width="150dp"
+                        android:layout_height="18dp"
+                        android:background="@color/colorShimmerLoading" />
+
+                    <View
+                        android:id="@+id/tv222"
+                        android:layout_width="40dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/colorShimmerLoading" />
+
+
+
+                    <View
+                        android:id="@+id/tv322"
+                        android:layout_width="120dp"
+                        android:layout_height="15dp"
+                        android:layout_below="@id/tv122"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorShimmerLoading" />
+
+
+                    <View
+
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_below="@id/tv322"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorShimmerLoading" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_layout_border"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:background="@color/colorShimmerLoading"
+
+                    />
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:background="@color/colorShimmerLoading"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="40dp"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="50dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/colorShimmerLoading"
+
+                />
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/tvTimeOfCreation"
+                >
+
+
+
+
+                <ImageView
+                    android:id="@+id/iv33"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@color/colorShimmerLoading"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@id/iv33"
+                    android:padding="3dp"
+
+                    >
+
+
+                    <View
+                        android:id="@+id/tv133"
+                        android:layout_width="150dp"
+                        android:layout_height="18dp"
+                        android:background="@color/colorShimmerLoading" />
+
+                    <View
+                        android:id="@+id/tv233"
+                        android:layout_width="40dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/colorShimmerLoading" />
+
+
+
+                    <View
+                        android:id="@+id/tv333"
+                        android:layout_width="120dp"
+                        android:layout_height="15dp"
+                        android:layout_below="@id/tv133"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorShimmerLoading" />
+
+
+                    <View
+
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_below="@id/tv333"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorShimmerLoading" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</com.facebook.shimmer.ShimmerFrameLayout>

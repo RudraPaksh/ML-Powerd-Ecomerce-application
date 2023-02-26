@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTransparent"
+    tools:context="io.shubh.e_comm_ver1.ItemDetailPage.View.ItemDetailFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_viewpager_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager2"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:clipToPadding="false"
+            android:overScrollMode="ifContentScrolls">
+
+        </androidx.viewpager.widget.ViewPager>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_marginTop="270dp"
+            android:gravity="bottom"
+            android:theme="@style/Base.Widget.Design.TabLayout"
+            app:tabBackground="@drawable/tab_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="fixed"
+            app:tabRippleColor="@color/colorSecondary" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="13dp"
+            android:background="#000"
+            app:cardCornerRadius="20dp"
+            android:alpha=".5"
+            android:elevation="10dp">
+
+            <ImageButton
+                android:id="@+id/btCloseFrag"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_gravity="left"
+                android:background="@color/colorTransparent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="11dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_close_svg"
+                android:tint="?attr/colorPrimaryText"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="13dp"
+            android:background="#000"
+            app:cardCornerRadius="20dp"
+            android:alpha=".5"
+            android:elevation="10dp">
+
+            <ImageButton
+                android:id="@+id/btBagItems"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+
+                android:background="@color/colorTransparent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="9dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_shopping_bag_svg"
+                android:tint="?attr/colorPrimaryText"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+    <!--below cooordinatorlayout id for bootomsheet to inflate-->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTransparent">
+
+        <include layout="@layout/bottom_sheet_fr_item_detail_page"
+
+            />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_container_of_bt_sheet_fr_order_timeline"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:paddingBottom="0dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+android:elevation="100dp"
+
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <com.google.android.material.appbar.AppBarLayout
+
+        android:id="@+id/appBarLayoutBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:stateListAnimator="@null">
+
+        <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:elevation="0dp"
+
+            android:gravity="center_vertical"
+            android:minHeight="?attr/actionBarSize"
+            android:padding="4dp"
+            android:visibility="visible"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <!--TODo -make the below bt color more light-->
+            <ImageButton
+                android:id="@+id/btCloseBttmSheet"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_gravity="left"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="9dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_close_svg"
+                android:tint="?attr/colorPrimaryText"
+
+                />
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBarLayoutBottomSheet"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingLeft="0dp"
+                android:text="(Qt.3),Gucchi belt"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimaryText"
+                android:layout_marginBottom="10dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <ImageView
+                    android:id="@+id/iv1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_dot_svg" />
+
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/iv1"
+                    android:layout_alignStart="@id/iv1"
+                    android:layout_alignBottom="@id/cb1"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/colorSecondary" />
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/iv1"
+                    android:layout_alignStart="@id/iv1"
+                    android:layout_alignBottom="@id/tvTimeOfCreation1"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/colorSecondary" />
+
+                <TextView
+                    android:id="@+id/tvStatus1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@id/iv1"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Order Placed"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTimeOfCreation1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvStatus1"
+                    android:layout_alignStart="@id/tvStatus1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="0dp"
+                    android:text="12:360Am"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvDescp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvTimeOfCreation1"
+                    android:layout_alignStart="@id/tvStatus1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#398CD834"
+                    android:padding="5dp"
+                    android:text="Next step is to pack the order.And then prepare it for sending through the courrier or personal delivery in case delivery address is close."
+                    android:textColor="#8CD834"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/cb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDescp1"
+                    android:layout_alignStart="@id/tvStatus1"
+                    android:layout_marginTop="10dp"
+                    android:buttonTint="@color/colorSecondary"
+                    android:text="Order Packaged"
+                    android:textColor="@color/colorLightGrayForSubHeaderTvs" />
+
+                <ProgressBar
+                    android:id="@+id/pb1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_toRightOf="@id/cb1"
+                    android:layout_alignTop="@id/cb1"
+                    android:layout_margin="10dp"
+                    android:indeterminateTint="@color/colorSecondary"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl1"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:id="@+id/iv2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_dot_svg" />
+
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/iv2"
+                    android:layout_alignStart="@id/iv2"
+                    android:layout_alignBottom="@id/cb2"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/colorSecondary" />
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/iv2"
+                    android:layout_alignStart="@id/iv2"
+                    android:layout_alignBottom="@id/tvTimeOfCreation2"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/colorSecondary" />
+
+
+                <TextView
+                    android:id="@+id/tvStatus2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@id/iv2"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Order Packaged"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTimeOfCreation2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvStatus2"
+                    android:layout_alignStart="@id/tvStatus2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="0dp"
+                    android:text="12:360Am"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvDescp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvTimeOfCreation2"
+                    android:layout_alignStart="@id/tvStatus2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#398CD834"
+                    android:padding="5dp"
+                    android:text="Next step is to Ship the order and mark it below to notify the buyer when done."
+                    android:textColor="#8CD834"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/cb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDescp2"
+                    android:layout_alignStart="@id/tvStatus2"
+                    android:layout_marginTop="10dp"
+                    android:buttonTint="@color/colorSecondary"
+                    android:text="Order Shipped"
+                    android:textColor="@color/colorLightGrayForSubHeaderTvs" />
+
+                <ProgressBar
+                    android:id="@+id/pb2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_toRightOf="@id/cb2"
+                    android:layout_alignTop="@id/cb2"
+                    android:layout_margin="10dp"
+                    android:indeterminateTint="@color/colorSecondary"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl2"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:id="@+id/iv3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_dot_svg" />
+
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/iv3"
+                    android:layout_alignStart="@id/iv3"
+                    android:layout_alignBottom="@id/cb3"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/colorSecondary" />
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/iv3"
+                    android:layout_alignStart="@id/iv3"
+                    android:layout_alignBottom="@id/tvTimeOfCreation3"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/colorSecondary" />
+
+                <TextView
+                    android:id="@+id/tvStatus3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@id/iv3"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Order Shipped"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTimeOfCreation3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvStatus3"
+                    android:layout_alignStart="@id/tvStatus3"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="0dp"
+                    android:text="12:360Am"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvDescp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvTimeOfCreation3"
+                    android:layout_alignStart="@id/tvStatus3"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#398CD834"
+                    android:padding="5dp"
+                    android:text="Next step is to Deliver the order and mark it below to notify the buyer when done."
+                    android:textColor="#8CD834"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/cb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDescp3"
+                    android:layout_alignStart="@id/tvStatus3"
+                    android:layout_marginTop="10dp"
+                    android:buttonTint="@color/colorSecondary"
+                    android:text="Order Delivered"
+                    android:textColor="@color/colorLightGrayForSubHeaderTvs" />
+
+                <ProgressBar
+                    android:id="@+id/pb3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_toRightOf="@id/cb3"
+                    android:layout_alignTop="@id/cb3"
+                    android:layout_margin="10dp"
+                    android:indeterminateTint="@color/colorSecondary"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl3"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:id="@+id/iv4"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_dot_svg" />
+
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/iv4"
+                    android:layout_alignStart="@id/iv4"
+                    android:layout_alignBottom="@id/tvTimeOfCreation4"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/colorSecondary" />
+
+
+                <TextView
+                    android:id="@+id/tvStatus4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@id/iv4"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Order Deliverd"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTimeOfCreation4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvStatus4"
+                    android:layout_alignStart="@id/tvStatus4"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="0dp"
+                    android:text="12:360Am"
+                    android:textSize="13sp" />
+
+                <!--   <TextView
+                       android:id="@+id/tvDescp4"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_below="@id/tvTimeOfCreation3"
+                       android:layout_marginTop="10dp"
+                       android:layout_marginLeft="5dp"
+                       android:text="Next step is to Deliver the order and mark it below to notify the buyer when done."
+                       android:textSize="15sp"
+                       android:padding="5dp"
+                       android:layout_alignStart="@id/tvStatus3"
+                       android:textColor="#8CD834"
+                       android:background="#398CD834"/>-->
+
+                <!--<CheckBox
+                    android:id="@+id/cb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvTimeOfCreation4"
+                    android:layout_alignStart="@id/tvTimeOfCreation4"
+                    android:buttonTint="@color/colorSecondary"
+                    android:layout_marginTop="10dp"
+                    android:text="Order Delivered"
+                    android:textColor="@color/colorLightGrayForSubHeaderTvs"
+                    />-->
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl4"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:id="@+id/iv5"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_dot_svg"
+                    android:tint="@color/colorRed" />
+
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/iv5"
+                    android:layout_alignStart="@id/iv5"
+                    android:layout_alignBottom="@id/tvTimeOfCreation5"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/colorRed" />
+
+
+                <TextView
+                    android:id="@+id/tvStatus5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@id/iv5"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Order Cancelled by you or Seller or order returned"
+                    android:textColor="@color/colorRed"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTimeOfCreation5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvStatus5"
+                    android:layout_alignStart="@id/tvStatus5"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="0dp"
+                    android:text="12:360Am"
+                    android:textSize="13sp" />
+
+                <!--  <TextView
+                      android:id="@+id/tvDescp3"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/tvTimeOfCreation3"
+                      android:layout_marginTop="10dp"
+                      android:layout_marginLeft="5dp"
+                      android:text="Next step is to Deliver the order and mark it below to notify the buyer when done."
+                      android:textSize="15sp"
+                      android:padding="5dp"
+                      android:layout_alignStart="@id/tvStatus3"
+                      android:textColor="#8CD834"
+                      android:background="#398CD834"/>-->
+
+                <!-- <CheckBox
+                     android:id="@+id/cb5"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@id/tvDescp3"
+                     android:layout_alignStart="@id/tvStatus3"
+                     android:buttonTint="@color/colorSecondary"
+                     android:layout_marginTop="10dp"
+                     android:text="Order Delivered"
+                     android:textColor="@color/colorLightGrayForSubHeaderTvs"
+                     />-->
+
+
+            </RelativeLayout>
+            
+            <LinearLayout
+                android:id="@+id/llAddressContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:background="#398CD834"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/tvRecieverName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="#8CD834"                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvAreaStateCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Area"
+                    android:textColor="#8CD834"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvHouseNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Area"
+                    android:textColor="#8CD834"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llChoices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_layout_border"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel/Return This order"
+                    android:textColor="@color/colorRed"
+                    android:textSize="18dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="5dp"
+                    />
+
+             <include layout="@layout/inflate_divider"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rate This Item"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="18dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="5dp"
+                    />
+                <include layout="@layout/inflate_divider"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Download Invoice"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="18dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="5dp"
+                    />
+                <include layout="@layout/inflate_divider"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Conatct Us"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="18dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="5dp"
+                    />
+
+            </LinearLayout>
+            
+            
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    tools:context="io.shubh.e_comm_ver1.SellerDashboard.View.SellerDashboardFragment">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background=" @color/colorTransparent"
+        android:elevation="10dp"
+
+        android:gravity="center_vertical"
+        android:minHeight="?attr/actionBarSize"
+        android:padding="4dp"
+        android:visibility="visible">
+
+        <ImageButton
+            android:id="@+id/btCloseFrag"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_gravity="left"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_back_svg"
+            android:tint="?attr/colorPrimaryText"
+
+            />
+
+        <Button
+            android:id="@+id/btAddNewItem"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorTransparent"
+            android:elevation="0dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="10dp"
+            android:text="Sell New Item"
+            android:textAllCaps="false"
+            android:textColor="?attr/colorPrimaryText"
+            android:textSize="15dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="0dp"
+                    android:text="Thu,Feb 27,2020"
+                    android:textColor="#779C57"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="0dp"
+                    android:text="Welcome Back!"
+                    android:textColor="#4A7227"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/view2"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:elevation="0dp"
+                    android:innerRadius="0dp"
+                    android:shape="ring"
+                    app:cardCornerRadius="40dp"
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:tint="?attr/colorForObjects"
+                        app:srcCompat="@drawable/my_profile"
+                        android:padding="5dp"
+                        />
+                </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="8dp"
+                        android:shape="ring"
+                        app:cardCornerRadius="40dp"
+                        app:background="@color/colorTransparent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/edit_bt"
+                            android:tint="@color/colorSecondary"
+                           android:padding="1dp"
+                            />
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="10dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/bg_gradient3_fr_item_detail_taking_frag"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/tvText1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/"
+                        android:gravity="left"
+                        android:text="Account Balance"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="23sp" />
+
+                    <TextView
+                        android:id="@+id/tvAccountBalance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvText1"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/"
+                        android:gravity="left"
+                        android:text="₹0.00"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="50sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvAccountBalance"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="horizontal"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvText1"
+                            android:layout_gravity="bottom"
+                            android:text="Transfer Balance"
+                            android:textColor="?attr/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvText1"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="15dp"
+                            android:text="View Transactions"
+                            android:textColor="?attr/colorPrimary"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="10dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/tv_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="left"
+                        android:text="Transaction Summary"
+                        android:textColor="?attr/colorPrimaryText"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                    <ProgressBar
+                        android:id="@+id/progressBarFrTrnsctSummryTvs"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"
+                        android:indeterminateTint="@color/colorSecondary"
+                        android:visibility="visible" />
+
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_2">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="horizontal"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvNewOrderBt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:elevation="10dp"
+                                app:cardCornerRadius="10dp"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorSecondary"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tvText1"
+                                        android:layout_gravity="bottom"
+                                        android:text="New Orders"
+                                        android:textColor="?attr/colorPrimary"
+                                        android:textSize="15sp" />
+
+                                    <TextView
+                                        android:id="@+id/newOrderTv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tvText1"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="20dp"
+                                        android:text="0"
+                                        android:textColor="?attr/colorPrimary"
+                                        android:textSize="30sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvProcessedBt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:elevation="10dp"
+                                app:cardCornerRadius="10dp"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorSecondary"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tvText1"
+                                        android:layout_gravity="bottom"
+                                        android:text="Processed"
+                                        android:textColor="?attr/colorPrimary"
+                                        android:textSize="15sp" />
+
+                                    <TextView
+                                        android:id="@+id/processedOrederTv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tvText1"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="20dp"
+                                        android:text="0"
+                                        android:textColor="?attr/colorPrimary"
+                                        android:textSize="30sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvReturnedBt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:elevation="10dp"
+                                app:cardCornerRadius="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorSecondary"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tvText1"
+                                        android:layout_gravity="bottom"
+                                        android:text="Complain/Return"
+                                        android:textColor="?attr/colorPrimary"
+                                        android:textSize="15sp" />
+
+                                    <TextView
+                                        android:id="@+id/returnedOrderTv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tvText1"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="20dp"
+                                        android:text="0"
+                                        android:textColor="?attr/colorPrimary"
+                                        android:textSize="30sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Recently Sold Items"
+                    android:textColor="?attr/colorPrimaryText"
+                    android:textSize="23sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!--=========================BottomSheet Container===========================-->
+
+    <!--background dimmer view-->
+
+    <!--below cooordinatorlayout id for bootomsheet to inflate-->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/touch_to_dismiss_bottom_sheet_dim_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#9000"
+            android:clickable="true"
+            android:visibility="gone" />
+
+
+        <include layout="@layout/bottom_sheet_fr_item_lists_fr_seller_dashboard" />
+
+        <!--    <androidx.cardview.widget.CardView
+                android:id="@+id/cv_container_loaading_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_loading_gif"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+
+
+                    />
+            </androidx.cardview.widget.CardView>-->
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

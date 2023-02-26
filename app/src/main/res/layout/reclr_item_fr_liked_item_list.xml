@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingLeft="6dp"
+    android:paddingTop="4dp"
+    android:paddingRight="6dp"
+    android:paddingBottom="4dp"
+    android:layout_marginTop="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:elevation="8dp"
+            card_view:cardCornerRadius="4dp">
+
+
+            <ImageView
+                android:id="@+id/ivItemImage"
+                android:layout_width="100dp"
+                android:layout_height="130dp"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorLoadingImageViewPlaceholder"
+                android:scaleType="fitCenter"
+
+                android:transitionName="MyTransition" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="27dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+
+            <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="2"
+                android:text="casJDv"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/tvCtgr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="mens fashion/sub ctgr"
+                android:textColor="?attr/colorSecondaryText"
+                android:textSize="15sp" />
+        <!--    <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="2dp"
+                android:text="rs 50."
+                android:fontFamily="sans-serif-medium"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="18sp" />-->
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="5dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="2dp"
+        android:text="rs 50."
+        android:fontFamily="sans-serif-medium"
+        android:textColor="?attr/colorSecondaryText"
+        android:textSize="16sp" />
+
+
+    <ImageButton
+        android:id="@+id/btDelete"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:padding="1.5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_delete_svg"
+        android:tint="?attr/colorForObjects" />
+
+    <RelativeLayout
+        android:id="@+id/rlErrorOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:background="@color/colorSecondaryAtHalfTransparency"
+        android:padding="25dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvCenterMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Error Message"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            android:fontFamily="sans-serif-medium"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

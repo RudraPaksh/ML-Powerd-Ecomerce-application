@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="io.shubh.e_comm_ver1.LikedItems.View.LikedItemsFragment"
+    android:background="?attr/colorPrimary">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:stateListAnimator="@null">
+
+            <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:elevation="0dp"
+
+                android:gravity="center_vertical"
+                android:minHeight="?attr/actionBarSize"
+                android:padding="4dp"
+                android:visibility="visible"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <!--TODo -make the below bt color more light-->
+                <ImageButton
+                    android:id="@+id/btCloseFrag"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_gravity="left"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_back_svg"
+                    android:tint="?attr/colorPrimaryText"
+
+                    />
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <TextView
+                android:id="@+id/id_fr_tv_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:fontFamily="@font/adamina"
+                android:maxLines="1"
+                android:paddingLeft="15dp"
+                android:paddingTop="13dp"
+                android:layout_marginBottom="5dp"
+                android:paddingRight="15dp"
+                android:text="Liked Items"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="35sp"
+                />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <include
+            layout="@layout/shimmer_layout_file_fr_include_in_liked_items_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rclrViewFrBagItemsList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="10dp"
+
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <RelativeLayout
+            android:id="@+id/rlCpntainerFrEmptyListMsg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" >/
+            <ImageView
+                android:id="@+id/ivEmptyMsg"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:layout_above="@id/itsPurposeIsToPostionOtherLayoutRelativeToCenter"
+                android:src="@drawable/ic_empty_reclr_view_ctgr_svg"
+                android:padding="10dp"
+                />
+            <View
+                android:id="@+id/itsPurposeIsToPostionOtherLayoutRelativeToCenter"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_centerInParent="true"
+                />
+
+            <TextView
+                android:id="@+id/tv1OfEmptyMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/ivEmptyMsg"
+                android:text="No Items Found"
+                android:textSize="20dp"
+                android:padding="2dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="?attr/colorPrimaryText"
+                />
+
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

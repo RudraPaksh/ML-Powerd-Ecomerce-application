@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_container_of_ordered_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:foreground="?android:attr/selectableItemBackground"
+
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:elevation="15dp"
+        card_view:cardCornerRadius="2dp">
+
+
+        <ImageView
+            android:id="@+id/ivItemImage"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorLoadingImageViewPlaceholder"
+            android:scaleType="fitCenter" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/cv"
+        android:layout_marginLeft="3dp"
+        android:padding="3dp">
+
+
+        <TextView
+            android:id="@+id/tvItemStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Delivered"
+            android:textColor="#A60C0C0C"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="?attr/colorSecondaryText"
+            android:textSize="18sp"
+            android:text="rs 160"
+            android:gravity="right"
+           android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/tvItemStatus"
+         />
+
+
+        <TextView
+            android:id="@+id/tvStatusDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvItemStatus"
+            android:layout_marginTop="1dp"
+            android:text="Moday 17 jan"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="?attr/colorPrimaryText"
+            android:textSize="22sp"
+           android:fontFamily="sans-serif-medium"/>
+
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvStatusDate"
+            android:layout_marginTop="1dp"
+            android:text="Vershace Jeans"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="?attr/colorPrimaryText"
+            android:textSize="20sp"
+      />
+
+
+    </RelativeLayout>
+</RelativeLayout>
+
+

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_root_view_bttm_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorTransparent"
+    android:clickable="true"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="6dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="20dp">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/id_fr_tv_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/toolbar"
+                    android:layout_marginBottom="5dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/adamina"
+                    android:paddingTop="6dp"
+                    android:text="Create Address"
+                    android:textColor="?attr/colorPrimaryText"
+                    android:textSize="25sp" />
+
+                <LinearLayout
+                    android:id="@+id/llAsBtUseGps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/bg_button_border"
+                    android:orientation="horizontal"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="Map"
+                        android:textColor="@color/colorSecondary"
+                        android:textSize="18sp"
+                    android:textStyle="bold"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/id_fr_bt_bottom_sheet_back"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                       android:padding="3dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_map_svg" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:clickable="true">
+            <EditText
+                android:id="@+id/edRecieverName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_layout_border"
+                android:hint="Reciever Name"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/edPinCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_layout_border"
+                android:hint="Pin Code"
+                android:inputType="number"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/edHouseNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_layout_border"
+                android:hint="House No"
+
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/edArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_layout_border"
+                android:hint="Area"
+
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/edCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_layout_border"
+                android:hint="City"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/edState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_layout_border"
+                android:hint="State "
+
+                android:padding="10dp" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <Button
+                android:id="@+id/btContinue2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_gradient_gradient"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="Create"
+                android:textColor="?attr/colorPrimary" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

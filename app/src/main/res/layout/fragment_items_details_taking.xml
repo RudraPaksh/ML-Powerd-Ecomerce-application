@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_gradient3_fr_item_detail_taking_frag"
+
+    tools:context="io.shubh.e_comm_ver1.io.shubh.e_comm_ver1.ItemsDetailsTakingFragment.View.ItemsDetailsTakingFragment"
+
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background=" @color/colorTransparent"
+
+                android:elevation="0dp"
+                android:gravity="center_vertical"
+                android:minHeight="?attr/actionBarSize"
+                android:padding="4dp"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/id_fr_menu_bt"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_gravity="left"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_back_svg"
+                    android:tint="@color/colorPrimary"
+
+                    />
+
+                <Button
+                    android:id="@+id/bt_upload_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/colorTransparent"
+                    android:elevation="0dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="Upload"
+                    android:textColor="@color/colorPrimary" />
+            </androidx.appcompat.widget.Toolbar>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="Add an Item"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="40sp" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="35dp"
+
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="15dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Select Images (Max 5)."
+                            android:textColor="?attr/colorPrimaryText"
+                            android:fontFamily="sans-serif-medium"
+                            android:textSize="20sp" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            app:cardCornerRadius="8dp">
+
+                            <ImageButton
+                                android:id="@+id/id_fr_bt_choose_images"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+
+                                android:background="@color/colorSecondary"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:padding="6dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_add_svg"
+                                android:tint="@color/colorPrimary"
+
+                                />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+
+                    <HorizontalScrollView
+                        android:id="@+id/id_fr_horizontal_scrll_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_layout_border"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/ll_container_fr_ivs"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:animateLayoutChanges="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                    <!--============================================================-->
+                    <EditText
+                        android:id="@+id/ed_name_of_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_layout_border"
+                        android:hint="Name"
+                        android:padding="10dp" />
+
+                    <EditText
+                        android:id="@+id/ed_price_of_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_layout_border"
+                        android:hint="Item Price in Rs."
+                        android:inputType="number"
+                        android:padding="10dp" />
+
+                    <EditText
+                        android:id="@+id/ed_descrp_of_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_layout_border"
+                        android:hint="Description"
+                        android:inputType="textMultiLine"
+
+                        android:padding="10dp" />
+
+                    <!--===============below layout is for ctgr section==================-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="10dp"
+                        android:animateLayoutChanges="true"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="6dp"
+                            app:cardCornerRadius="8dp">
+
+                            <ImageButton
+                                android:id="@+id/id_fr_bt_bottom_sheet_back"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@color/colorSecondary"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:padding="4dp"
+                                android:rotation="180"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_arrow_right_svg"
+                                android:tint="@color/colorPrimary" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/id_br_bottom_sheet_tv_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="Select a Category"
+                            android:textColor="?attr/colorPrimaryText"
+                            android:fontFamily="sans-serif-medium"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:background="@drawable/bg_layout_border">
+
+                        <LinearLayout
+                            android:id="@+id/container_fr_ctgr"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:animateLayoutChanges="true"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--===============below layout is for varietry gving faciilty section==================-->
+                    <LinearLayout
+                        android:id="@+id/container_fr_variety_giving_option"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+
+                            <TextView
+                                android:id="@+id/tvHeader"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Add Variety"
+                                android:textColor="?attr/colorPrimaryText"
+                                android:fontFamily="sans-serif-medium"
+                                android:textSize="20sp" />
+                            <!--below bt is for info about this feature-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_toRightOf="@id/tvHeader"
+                                app:cardCornerRadius="8dp">
+
+                                <ImageButton
+                                    android:id="@+id/bt_show_btm_sheet_fr_info"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:background="@color/colorSecondary"
+                                    android:foreground="?android:attr/selectableItemBackground"
+                                    android:padding="4dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_info_svg"
+                                    android:tint="@color/colorPrimary"
+
+                                    />
+                            </androidx.cardview.widget.CardView>
+
+                            <Switch
+                                android:id="@+id/switch1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="3dp"
+                                android:text="Add"
+                                android:textColor="@color/colorSecondary"
+                                android:textSize="17sp" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:animateLayoutChanges="true"
+                            android:background="@drawable/bg_layout_border"
+                            android:orientation="vertical"
+                            android:padding="0dp">
+
+                            <EditText
+                                android:id="@+id/ed_name_of_variety"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:background="@drawable/bg_layout_border"
+                                android:hint="Name of Variety,like shoe size."
+                                android:padding="10dp"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:id="@+id/container_for_varieties"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:animateLayoutChanges="true"
+                                android:orientation="vertical"
+                                android:visibility="gone" />
+
+                            <Button
+                                android:id="@+id/btAdd_indivisual_variety"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/bg_gradient_gradient"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:text="Add more"
+                                android:textColor="#fff"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="6dp"
+
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_visiblity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Visibilty"
+                            android:textColor="?attr/colorPrimaryText"
+                            android:fontFamily="sans-serif-medium"
+                            android:textSize="20sp" />
+                        <!--below bt is for info about this feature-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_toRightOf="@id/tv_visiblity"
+                            app:cardCornerRadius="8dp">
+
+                            <ImageButton
+                                android:id="@+id/ibt_show_bttm_sheet_info"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:background="@color/colorSecondary"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:padding="4dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_info_svg"
+                                android:tint="@color/colorPrimary"
+
+                                />
+                        </androidx.cardview.widget.CardView>
+
+                        <Switch
+                            android:id="@+id/switch2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="3dp"
+                            android:text="Visible"
+                            android:textColor="@color/colorSecondary"
+                            android:textSize="17sp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!--=========================BottomSheet Container===========================-->
+
+    <!--background dimmer view-->
+
+    <!--below cooordinatorlayout id for bootomsheet to inflate-->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/touch_to_dismiss_bottom_sheet_dim_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+android:background="?attr/colorPrimaryText"
+            android:clickable="true"
+            android:visibility="gone"
+            android:alpha=".6"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_container_loaading_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:elevation="70dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:id="@+id/iv_loading_gif"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+
+
+                />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

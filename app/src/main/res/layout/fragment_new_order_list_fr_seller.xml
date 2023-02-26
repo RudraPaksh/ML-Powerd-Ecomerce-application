@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    android:clickable="true"
+    tools:context="io.shubh.e_comm_ver1.OrderListFrSellerFragment.View.NewOrderListFrSellerFragment">
+    <!--TODo -make all fragments root as clickable-->
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:stateListAnimator="@null">
+
+            <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorTransparent"
+                android:elevation="0dp"
+
+                android:gravity="center_vertical"
+                android:minHeight="?attr/actionBarSize"
+                android:padding="4dp"
+                android:visibility="visible"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <!--TODo -make the below bt color more light-->
+                <ImageButton
+                    android:id="@+id/btCloseFrag"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_gravity="left"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_back_svg"
+                    android:tint="?attr/colorPrimaryText"
+
+                    />
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <TextView
+                android:id="@+id/id_fr_tv_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/adamina"
+                android:maxLines="1"
+                android:paddingLeft="15dp"
+                android:paddingTop="13dp"
+                android:paddingRight="15dp"
+                android:text="New Orders"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="35sp" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:id="@+id/llContainerFrItems"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/colorPrimary"
+                android:orientation="vertical"/>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <include layout="@layout/bottom_sheet_fr_order_timeline" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

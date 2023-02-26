@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llConatinerRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
+android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#398CD834"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    >
+
+    <TextView
+        android:id="@+id/tvItemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="hbkbbkvgvjj"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        android:textColor="#8CD834"/>
+    <TextView
+        android:id="@+id/tvItemProbability"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="hbkbbkvgvjj"
+        android:textSize="17dp"
+        android:textStyle="normal"
+        android:textColor="?attr/colorPrimaryText"/>
+
+</LinearLayout>
+
+

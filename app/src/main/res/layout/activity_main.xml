@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    android:fitsSystemWindows="false"
+    tools:context="io.shubh.e_comm_ver1.Main.View.MainActivity">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stateListAnimator="@null"
+            android:elevation="0dp">
+            <!--custom tool bar below-->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:elevation="0dp"
+                android:minHeight="?attr/actionBarSize"
+                android:padding="4dp"
+                app:layout_scrollFlags="scroll|enterAlways|snap">
+
+                <ImageButton
+                    android:id="@+id/id_fr_menu_bt"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="left"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="9dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_menu_svg"
+                    android:tint="?attr/colorPrimaryText"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btBagItems"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:padding="9dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_shopping_bag_svg"
+                    android:tint="?attr/colorPrimaryText"/>
+
+                <ImageButton
+                    android:id="@+id/btNotification"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:padding="9dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_notification_svg"
+                    android:tint="?attr/colorPrimaryText"
+                    />
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <!--no need to give below cv any background color ..it auromatically adjusts itself for it-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_search"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="8dp"
+                android:elevation="50dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="50dp"  >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                 >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:adjustViewBounds="true"
+                        android:clickable="false"
+                        android:layout_marginLeft="5dp"
+                        app:srcCompat="@drawable/ic_search_svg"
+                        android:tint="?android:attr/editTextColor"/>
+
+                    <TextView
+                        android:id="@+id/edt_search_text"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+android:textColor="?android:attr/textColorSecondary"
+
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:gravity="center_vertical"
+                        android:text="Search using ML Tech."
+                        android:textSize="17sp" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_header_ctgr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adamina"
+                android:paddingLeft="15dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="10dp"
+
+                android:text="Categories"
+                android:textColor="?attr/colorPrimaryText"
+
+                android:textSize="34sp"
+            />
+            <!--<TextView
+                android:id="@+id/tv_header_ctgr"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:fontFamily="@font/adamina"
+                android:maxLines="1"
+                android:paddingLeft="15dp"
+                android:paddingTop="13dp"
+                android:layout_marginBottom="5dp"
+                android:paddingRight="15dp"
+                android:text="Liked Items"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="35sp"
+                />-->
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/id_fr_recycler_view_main_activity_items_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8.5dp"
+            android:paddingRight="8.5dp"
+            android:visibility="invisible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+
+            />
+
+
+        <!--below is the shimmer layout for placeholding till its loading-->
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+            shimmer:duration="400"
+
+            >
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:orientation="horizontal"
+
+                    android:weightSum="2">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorShimmerLoading" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:background="@color/colorShimmerLoading" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_below="@id/ll_1"
+
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorShimmerLoading" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:background="@color/colorShimmerLoading" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--============================Drawer content here=========================-->
+    <LinearLayout
+        android:id="@+id/drawer"
+        android:layout_width="230dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/colorSecondary"
+        android:gravity="left"
+
+        android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/view2"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:elevation="10dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            app:cardCornerRadius="40dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+android:tint="?attr/colorForObjects"
+                app:srcCompat="@drawable/my_profile"
+                android:padding="7dp"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tv_for_nav_dr_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_horizontal"
+            android:text="Name"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="?attr/colorPrimary"
+android:fontFamily="sans-serif-condensed-medium"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_for_nav_dr_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:gravity="center_horizontal"
+            android:text="email"
+            android:textColor="?attr/colorPrimary"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="18dp"
+            android:background="@android:color/darker_gray" />
+
+        <!--       <View
+                   android:layout_width="match_parent"
+                   android:layout_height="2dp"
+                   android:layout_marginTop="40dp"
+                   android:background="@android:color/white"
+                   android:visibility="gone" />-->
+
+        <LinearLayout
+            android:id="@+id/id_fr_nav_bt_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:tint="?attr/colorPrimary"
+                app:srcCompat="@drawable/my_profile" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="3"
+                android:text="My Profile"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btDrwrLiked"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="4dp"
+                app:srcCompat="@drawable/ic_heart2_svg"
+                android:tint="?attr/colorPrimary"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="3"
+                android:text="Liked Items"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_fr_nav_bt_my_orders"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_order_svg"
+                android:tint="?attr/colorPrimary"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="3"
+                android:text="My Orders"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_fr_nav_bt_cart"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:tint="?attr/colorPrimary"
+                app:srcCompat="@drawable/ic_shopping_bag_svg" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="3"
+                android:text="My Cart/Bag"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_fr_nav_bt_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+
+            <ImageView
+                android:id="@+id/iv_icon_bt_drwr_switch_to_seller"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:tint="?attr/colorPrimary"
+                app:srcCompat="@drawable/switch_to_seller" />
+
+            <ProgressBar
+                android:id="@+id/progressBar_fr_bt_switch_to_seller"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:indeterminateTint="?attr/colorPrimary"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="3"
+                android:text="Switch to Seller"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+      <!--  <LinearLayout
+            android:id="@+id/id_fr_nav_bt_login_or_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+
+            <ImageView
+                android:id="@+id/id_fr_iv_nav_login_icon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="4dp"
+                app:srcCompat="@drawable/login_icon_" />
+
+            <TextView
+                android:id="@+id/id_fr_tv_nav_login_"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:text="Login"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </LinearLayout>-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv1"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="6dp"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:id="@+id/id_fr_ll_as_bt__Login"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/colorPrimary"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:orientation="vertical"
+
+                >
+
+                <TextView
+                    android:id="@+id/tvLoginBt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+
+                    android:text="Login"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <com.mahfa.dnswitch.DayNightSwitch
+            android:layout_width="76dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/day_night_switch"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            />
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
+

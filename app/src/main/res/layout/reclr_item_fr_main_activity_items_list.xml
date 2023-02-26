@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/id_card_fR_main_item_ctgr_item_list"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:elevation="10dp"
+        card_view:cardElevation="10dp"
+        card_view:cardCornerRadius="7dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginBottom="9dp"
+
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/id_iv_fR_main_item_ctgr_item_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:tint="#2A000000"
+            android:background="@color/colorLoadingImageViewPlaceholder"/>
+        <TextView
+          android:id="@+id/id_tv_fR_main_item_ctgr_item_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Furniture"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            android:textAlignment="center"/>
+    </androidx.cardview.widget.CardView>
+
+

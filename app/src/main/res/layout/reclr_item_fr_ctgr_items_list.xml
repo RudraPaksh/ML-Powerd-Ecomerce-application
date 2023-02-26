@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingLeft="4dp"
+    android:paddingTop="4dp"
+
+    android:paddingRight="4dp"
+    android:paddingBottom="0dp">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:layout_margin="3dp"
+        android:elevation="20dp"
+        card_view:cardCornerRadius="5dp">
+
+
+        <ImageView
+            android:id="@+id/id_iv_fR_rclr_item_ctgr_item_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorLoadingImageViewPlaceholder"
+            android:scaleType="centerCrop"
+
+            android:transitionName="MyTransition"
+            />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:orientation="horizontal"
+
+        android:padding="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_toLeftOf="@id/id_bt_save_fR_rclr_item_ctgr_item_list"
+            android:orientation="vertical">
+
+
+            <TextView
+
+                android:id="@+id/id_tv_price_fR_rclr_item_ctgr_item_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_toLeftOf="@id/id_bt_save_fR_rclr_item_ctgr_item_list"
+                android:ellipsize="end"
+                android:text="Rs .420"
+                android:textColor="?attr/colorSecondaryText"
+                android:textSize="13sp"
+                android:layout_marginLeft="3dp"/>
+
+
+            <TextView
+
+                android:id="@+id/id_tv_title_fR_rclr_item_ctgr_item_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+
+                android:text="Title"
+                android:textColor="?attr/colorPrimaryText"
+                android:layout_marginLeft="3dp"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/id_bt_save_fR_rclr_item_ctgr_item_list"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="?selectableItemBackgroundBorderless"
+
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_heart_svg"
+            android:tint="@color/colorSecondary"
+
+           />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

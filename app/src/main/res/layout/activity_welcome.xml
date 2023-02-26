@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    tools:context="io.shubh.e_comm_ver1.Welcome.View.WelcomeActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl2">
+
+
+        <TextView
+            android:id="@+id/id_fr_tv_welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/id_fr_tv_AMO_text"
+            android:layout_centerHorizontal="true"
+            android:text="Welcome to "
+            android:textAlignment="center"
+            android:textColor="?attr/colorSecondaryText"
+            android:textSize="@dimen/_23sdp" />
+
+        <TextView
+            android:id="@+id/id_fr_tv_AMO_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_above="@id/viewFrCenterReference2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-40dp"
+            android:text="ML Powered"
+            android:textColor="?attr/colorSecondaryText"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold"
+
+            />
+        <View
+            android:id="@+id/viewFrCenterReference2"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_fr_tv_AMO_text"
+            android:layout_centerHorizontal="true"
+            android:text="E-commerce App"
+            android:layout_marginTop="40dp"
+            android:textColor="?attr/colorSecondaryText"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+
+        <!--   <TextView
+               android:id="@+id/textView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/ll1"
+               android:layout_centerHorizontal="true"
+               android:layout_marginTop="29dp"
+               android:text="Explore us"
+               android:textAppearance="@style/TextAppearance.AppCompat.Large"
+               android:textSize="24sp"
+               android:textStyle="bold|italic" />-->
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/vector_art_welcome_page" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_above="@id/viewFrCenterReference"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:elevation="6dp"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:id="@+id/id_fr_ll_as_bt__signin"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@layout/gradient"
+                        android:clickable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:orientation="vertical"
+
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Email Login"
+                            android:textColor="?attr/colorPrimary"
+                            android:textSize="21sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:id="@+id/viewFrCenterReference"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true" />
+
+                <LinearLayout
+                    android:id="@+id/id_fr_ll_as_bt_not_now"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+
+                    android:layout_below="@id/cv1"
+                    android:layout_marginLeft="40dp"
+
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="40dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:text="Not now"
+                        android:textColor="?attr/colorSecondaryText"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+
+                >
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="?attr/colorForObjects" />
+
+
+                <ImageView
+                    android:id="@+id/id_fr_iv_as_bt_google_signin"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+
+                    android:layout_centerInParent="true"
+
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:srcCompat="@drawable/google_signin_icon" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar_g_signin"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+
+                    android:layout_centerInParent="true"
+                    android:indeterminateTint="@color/colorSecondary" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

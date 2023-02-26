@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDarkk">#cccccc</color>
+    <color name="colorSecondary">#8BC34A</color>
+    <color name="colorSecondaryAtHalfTransparency">#808BC34A</color>
+    <color name="colorAccent">#8BC34A</color>
+
+
+    <color name="colorWhiteSecondary">#EFF0EF</color>
+
+
+    <color name="colorBlackForHeaderTvs">#111111</color>
+    <color name="colorBlackForSubHeaderTvs">#161616</color>
+    <color name="colorGrayForHeaderTvs">#A60C0C0C</color>
+    <color name="colorLightGrayForSubHeaderTvs">#A6222222</color>
+    <color name="colorLightGrayForSubSubHeaderTvs">#A64E4D4D</color>
+
+    <color name="colorPrimaryPix">#075e54</color>
+    <color name="colorPrimaryLightPix">#80075e54</color>
+
+    <color name="colorShimmerLoading">#dddddd</color>
+    <color name="colorLoadingImageViewPlaceholder">#D3D1D1</color>
+    <color name="colorTransparent">#00ffffff</color>
+    <color name="colorBlur">#46111111</color>
+
+
+    <color name="colorGreen">#388E3C</color>
+    <color name="colorRed">#D32F2F</color>
+
+    <!--=================COLORS FOR LIGHT THEME==================-->
+    <color name="colorPrimaryLight">#ffffff</color><!--white-->
+    <color name="colorSubPrimaryLight">#F6FAF2</color><!--green grey-->
+    <color name="colorGreyForObjectsLight">#9E9E9E</color><!--grey 500-->
+    <color name="colorGreySecondaryForObjectsLight">#E0E0E0</color><!--grey 300-->
+    <color name="colorGreyForBlackTextLight">#212121</color><!--grey 900-->
+    <color name="colorGreyForGreyTextLight">#757575</color><!--grey 600-->
+
+
+    <!--=================COLORS FOR DARK THEME==================-->
+    <color name="colorPrimaryDark">#212121</color><!--green 900-->
+    <color name="colorSubPrimaryDark">#000000</color><!--black-->
+    <color name="colorGreyForObjectsDark">#616161</color><!--grey 700-->
+    <color name="colorGreySecondaryForObjectsdark">#E0E0E0</color><!--grey 300-->
+    <color name="colorGreyForWhiteTextDark">#E0E0E0</color><!--grey 300-->
+    <color name="colorGreyForGreyTextDark">#757575</color><!--grey 600-->
+
+
+</resources>

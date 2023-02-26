@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    android:clickable="true"
+    tools:context="io.shubh.e_comm_ver1.AddressSelectionPage.View.AddressSelectionFragment">
+
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTransparent"
+        android:elevation="0dp"
+
+        android:gravity="center_vertical"
+        android:minHeight="?attr/actionBarSize"
+        android:padding="4dp"
+        android:visibility="visible"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!--TODo -make the below bt color more light-->
+        <ImageButton
+            android:id="@+id/btCloseFrag"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_gravity="left"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_back_svg"
+            android:tint="?attr/colorPrimaryText"
+
+            />
+
+        <ImageButton
+            android:id="@+id/btAddAddress"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_gravity="right"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="7dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_add_svg"
+            android:tint="?attr/colorPrimaryText"
+            android:layout_marginRight="15dp"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/id_fr_tv_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/adamina"
+        android:maxLines="1"
+        android:paddingLeft="15dp"
+        android:paddingTop="13dp"
+        android:paddingRight="15dp"
+        android:text="Address"
+        android:textColor="?attr/colorPrimaryText"
+        android:textSize="35sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/id_fr_tv_header">
+    <LinearLayout
+        android:id="@+id/llContainerFrAddressItems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:animateLayoutChanges="true"
+        />
+    </ScrollView>
+
+
+    <include
+        layout="@layout/shimmer_layout_file_fr_include_in_bag_items_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/id_fr_tv_header" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlCpntainerFrEmptyListMsg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >/
+        <ImageView
+            android:id="@+id/ivEmptyMsg"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:layout_above="@id/itsPurposeIsToPostionOtherLayoutRelativeToCenter"
+            android:src="@drawable/ic_empty_reclr_view_ctgr_svg"
+            android:padding="10dp"
+            />
+        <View
+            android:id="@+id/itsPurposeIsToPostionOtherLayoutRelativeToCenter"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"
+            />
+
+        <TextView
+            android:id="@+id/tv1OfEmptyMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/ivEmptyMsg"
+            android:text="No Adress Found"
+            android:textSize="20dp"
+            android:padding="2dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="?attr/colorPrimaryText"
+            />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_gradient_gradient"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Continue"
+        android:textColor="?attr/colorPrimary" />
+
+
+    <!--below cooordinatorlayout id for bootomsheet to inflate-->
+    <!--below cooordinatorlayout id for bootomsheet to inflate-->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTransparent">
+
+        <View
+            android:id="@+id/touch_to_dismiss_bottom_sheet_dim_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#9000"
+            android:clickable="true"
+            android:visibility="gone" />
+
+        <include layout="@layout/bottom_sheet_fr_address_detail_taking"
+
+            />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</RelativeLayout>

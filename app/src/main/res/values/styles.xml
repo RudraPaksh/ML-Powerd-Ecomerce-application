@@ -1,0 +1,97 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+                <!--  previously the style was this ->      parent="Theme.AppCompat.Light.DarkActionBar">
+                                I have changed it  to no action bar because I am using custom actionBar in each activity .
+                -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+    <style name="AppThemeLight" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!--to make the below custom item ..we need to first define the name in other file ..I have done in attrs.xml-->
+        <item name="colorPrimary">@color/colorPrimaryLight</item>
+        <item name="colorSubPrimary">@color/colorSubPrimaryLight</item>
+        <item name="colorForObjects">@color/colorGreyForObjectsLight</item>
+        <item name="colorForObjectsSecondary">@color/colorGreySecondaryForObjectsLight</item>
+        <item name="colorPrimaryText">@color/colorGreyForBlackTextLight</item>
+        <item name="colorSecondaryText">@color/colorLightGrayForSubHeaderTvs</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="colorPrimaryDark">@color/colorPrimaryLight</item><!--this is status bar color used directly by app-->
+        <item name="android:navigationBarColor">@color/colorPrimaryLight</item><!--this is navigation bar(Bottomost bar having back and home keys) color used directly by app-->
+        <item name="android:navigationBarDividerColor" tools:targetApi="o_mr1">@color/colorGreySecondaryForObjectsLight</item><!--this is navigation bar(Bottomost bar having back and home keys) color used directly by app-->
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item><!--this item sets the nav bar keys color as dark..so no need of it in dark teheme-->
+        <item name="android:windowLightStatusBar" tools:targetApi="o_mr1">true</item><!--this item sets the status bar icon color as dark..so no need of it in dark teheme-->
+
+
+        <!--below line prevents the white screen at startup ut it also takes a bit delay after to open app after clicking app icon..so using this for now ,,change that in future -->
+        <item name="android:windowDisablePreview">true</item>
+        <!--   <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>-->
+    </style>
+
+
+
+    <style name="AppThemeDark" parent="Theme.AppCompat.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorSubPrimary">@color/colorSubPrimaryDark</item>
+        <item name="colorForObjects">@color/colorGreyForObjectsDark</item>
+        <item name="colorForObjectsSecondary">@color/colorGreySecondaryForObjectsdark</item>
+        <item name="colorPrimaryText">@color/colorGreyForWhiteTextDark</item>
+        <item name="colorSecondaryText">@color/colorGreyForGreyTextDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item><!--this is status bar color used directly by app-->
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item><!--this is navigation bar(Bottomost bar having back and home keys) color used directly by app-->
+        <item name="android:navigationBarDividerColor" tools:targetApi="o_mr1">@color/colorGreyForObjectsDark</item><!--this is navigation bar(Bottomost bar having back and home keys) color used directly by app-->
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item><!--this item sets the nav bar keys color as dark..so no need of it in dark teheme-->
+        <item name="android:windowLightStatusBar" tools:targetApi="o_mr1">false</item><!--this item sets the status bar icon color as dark..so no need of it in dark teheme-->
+
+        <!--below line prevents the white screen at startup ut it also takes a bit delay after to open app after clicking app icon..so using this for now ,,change that in future -->
+        <item name="android:windowDisablePreview">true</item>
+        <!--    <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>-->
+    </style>
+
+
+    <!-- This will set the fade in animation on all your activities by default -->
+ <!--   <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>-->
+
+
+
+<!--below theme is not needed naymore ..the parent theme consists of t5his all-->
+<!--Theme for item details fragment ..given to it dynamically in oncreate view-->
+    <!--    <style name="Theme.AppCompat.Translucent">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        &lt;!&ndash;       <item name="android:colorBackgroundCacheHint">@null</item>&ndash;&gt;
+        <item name="android:windowIsTranslucent">true</item>
+        &lt;!&ndash;  <item name="android:windowAnimationStyle">@android:style/Animation</item>&ndash;&gt;
+
+
+    </style>-->
+
+<!--do any chnge to layout of tablayout from here ,but to change the size of dots do that by drawable file thickness attribute-->
+    <style name="Base.Widget.Design.TabLayout" parent="android:Widget">
+        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
+        <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+
+
+
+</resources>

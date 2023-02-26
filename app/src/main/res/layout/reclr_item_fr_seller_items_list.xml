@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="330dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    card_view:cardCornerRadius="5dp"
+    android:elevation="10dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:id="@+id/id_iv_fR_rclr_item_seller_item_list"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/id_tv_title_fR_rclr_item_seller_item_list"
+            android:textColor="#000000"
+            android:layout_below="@+id/id_iv_fR_rclr_item_seller_item_list"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:ellipsize="end"
+            android:text="TITLE"
+            android:maxLines="1"
+           />
+
+       <!-- <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/id_iv_fR_rclr_item_seller_item_list"
+            android:id="@+id/ll"
+            android:layout_marginTop="2dp"
+            >-->
+
+
+            <TextView
+
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/id_tv_descr_fR_rclr_item_seller_item_list"
+                android:textStyle="normal"
+
+                android:paddingLeft="5dp"
+                android:layout_below="@id/id_tv_title_fR_rclr_item_seller_item_list"
+                android:ellipsize="end"
+                android:text="a decrp for the item and some random words here ..it was you the peopel of tollmorow whoe supplide dthe magix caby merging one single moelodsjk"
+                android:maxLines="2"
+                />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_tv_descr_fR_rclr_item_seller_item_list"
+            android:padding="8dp"
+android:id="@+id/catgr_tv"
+            android:text="Category :"
+            android:textSize="12sp"
+            android:textStyle="bold"
+
+            />
+     <!--   </LinearLayout>
+-->
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_tv_descr_fR_rclr_item_seller_item_list"
+            android:padding="8dp"
+android:id="@+id/id_fr_tv_ctgr_fR_rclr_item_seller_item_list"
+            android:text="Men's fashion /Clothing/ jeans"
+            android:textSize="12sp"
+            android:layout_toRightOf="@id/catgr_tv" />
+        <!--android:layout_below="@+id/ll"-->
+
+        <ImageButton
+            android:id="@+id/id_bt_edit_fR_rclr_item_seller_item_list"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/id_tv_descr_fR_rclr_item_seller_item_list"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="6dp"
+            card_view:srcCompat="@drawable/edit_bt"
+            android:background="?selectableItemBackgroundBorderless"
+            />
+
+        <ImageButton
+            android:id="@+id/id_bt_delete_fR_rclr_item_seller_item_list"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_toLeftOf="@id/id_bt_edit_fR_rclr_item_seller_item_list"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="6dp"
+            card_view:srcCompat="@drawable/ic_delete_svg"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_below="@id/id_tv_descr_fR_rclr_item_seller_item_list"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
